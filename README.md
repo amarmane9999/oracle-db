@@ -11,7 +11,7 @@ connecttion command:
 1. After the deployment is created, wait for the database to be initialised, the status can be viewed in logs.
 2. Once the db is initialised use following command connect to db.
 
-sqlplus sys/orcl2@//oracle-db.oracle-db.svc.cluster.local:1521/orcl1 as sysdba
+sqlplus sys/orcl2@//localhost:1521/orcl1 as sysdba
 
 sqlplus system/orcl@//localhost:1521/
 
