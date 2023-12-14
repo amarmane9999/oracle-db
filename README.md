@@ -9,7 +9,8 @@ Repository based on followig resources
 
 connecttion command:
 
-sqlplus sys/orcl2@//oracledb.test-db.svc.cluster.local:1521/orcl1 as sysdba
+sqlplus sys/orcl2@//oracle-db.oracle-db.svc.cluster.local:1521/orcl1 as sysdba
+
 sqlplus system/orcl@//localhost:1521/
 
 sqlplus pdbadmin/orcl2@//localhost:1521/orcl3
