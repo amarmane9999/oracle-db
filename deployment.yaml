@@ -26,24 +26,6 @@ items:
       apiGroup: rbac.authorization.k8s.io
       kind: ClusterRole
       name: 'system:openshift:scc:anyuid'
-  - kind: Service
-    apiVersion: v1
-    metadata:
-      name: oracledb
-      namespace: oracle-db
-    spec:
-      ports:
-        - name: 8080-tcp
-          protocol: TCP
-          port: 8080
-          targetPort: 8080
-        - name: 1521-tcp
-          protocol: TCP
-          port: 1521
-          targetPort: 1521
-      selector:
-        app: oracledb
-        deployment: oracledb
   - kind: Deployment
     apiVersion: apps/v1
     metadata:
@@ -87,3 +69,21 @@ items:
           serviceAccount: oracle-sa
           securityContext:
             runAsUser: 54321
+  - kind: Service
+    apiVersion: v1
+    metadata:
+      name: oracledb
+      namespace: oracle-db
+    spec:
+      ports:
+        - name: 8080-tcp
+          protocol: TCP
+          port: 8080
+          targetPort: 8080
+        - name: 1521-tcp
+          protocol: TCP
+          port: 1521
+          targetPort: 1521
+      selector:
+        app: oracledb
+        deployment: oracledb
