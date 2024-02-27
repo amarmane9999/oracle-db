@@ -13,6 +13,8 @@ connecttion command:
 
 sqlplus sys/orcl2@//localhost:1521/orcl1 as sysdba
 
-sqlplus system/orcl@//localhost:1521/
+sqlplus sys/orcl2@//localhost:1521/orcl3 as sysdba
+
+sqlplus system/orcl@//localhost:1521/orcl3
 
 sqlplus pdbadmin/orcl2@//localhost:1521/orcl3
